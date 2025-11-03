@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <cstdlib> // for abs
 
 using namespace std;
 
@@ -53,4 +54,20 @@ bool isPalindromeR(string s)
 string reverse(string s)
 {
 	return "fixme"; 
+}
+
+// Write a function that returns the sum of the decimal digits of n.
+// Example: sumDigits(12345) returns 15
+//          sumDigits(-4096) returns 19
+// You may not use a loop. Treat n as its absolute value.
+int sumDigits(int n) {
+    return -1; // fix this!
+}
+
+// Write a function that returns how many times x appears
+// in the first n elements of the array arr.
+// Example: arr = {1,1,2}, n = 3, x = 1  returns 2
+// You may not use a loop.
+int countOccurrences(const int* arr, int n, int x) {
+    return -1; // fix this!
 }

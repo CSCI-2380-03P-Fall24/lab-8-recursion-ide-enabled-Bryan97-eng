@@ -58,6 +58,25 @@ jobs:
         command: make test try=reverse
         timeout: 10
         max-score: 1
+    - name: sumDigits
+      id: sumdigits
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: sumDigits
+        setup-command: ''
+        command: make test try=sumDigits
+        timeout: 10
+        max-score: 1
+    - name: countOccurrences
+      id: countoccurrences
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: countOccurrences
+        setup-command: ''
+        command: make test try=countOccurrences
+        timeout: 10
+        max-score: 1
+
     - name: Autograding Reporter
       uses: classroom-resources/autograding-grading-reporter@v1
       env:
@@ -66,5 +85,7 @@ jobs:
         STARS_RESULTS: "${{steps.stars.outputs.result}}"
         ISPALINDROMER_RESULTS: "${{steps.ispalindromer.outputs.result}}"
         REVERSE_RESULTS: "${{steps.reverse.outputs.result}}"
+        SUMDIGITS_RESULTS: "${{steps.sumdigits.outputs.result}}"
+        COUNTOCCURRENCES_RESULTS: "${{steps.countoccurrences.outputs.result}}"
       with:
-        runners: lineofstars,power,stars,ispalindromer,reverse
+        runners: lineofstars,power,stars,ispalindromer,reverse,sumdigits,countoccurrences
